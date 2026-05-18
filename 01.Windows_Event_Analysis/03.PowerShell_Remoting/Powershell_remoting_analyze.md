@@ -1,10 +1,11 @@
-# 1.Powershell Remoting 
+# 1.Powershell Remoting
+	a powerful feature that lets you run PowerShell commands on remote computers 
 ### 2.Important Events:
 - **Security log:**
-	- 4624 → Đăng nhập thành công -> Logon Type: 3 = Network logon
-	- 4634 -> Đăng xuất
+	- 4624 → Logon successfully -> Logon Type: 3 = Network logon
+	- 4634 -> Logoff
 	- 4648 -> Explicit credentials được dùng
-	- 4672 -> Đăng nhập với quyền đặc biệt (Admin)
+	- 4672 -> asigned to special priviledge(Admin)
 ### 3.Network diagram 
 ![Image](images/0.png)
 ### 4. The process of analyzing:
