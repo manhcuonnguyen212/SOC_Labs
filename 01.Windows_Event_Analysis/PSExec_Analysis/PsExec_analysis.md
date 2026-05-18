@@ -17,7 +17,26 @@ computer after execution.
 ### Network diagram 
 ![Image](images/0.png)
 ### Detect PSExec by the default service name
-- Logon Win server 2022
-![Image](images/1.png))
-![Image](images/2.png))
+
+- **Logon Win server 2022**
+![Image](images/1.png)
+![Image](images/2.png)
+
+- **Run PSExec at the attacker's machine:192.168.1.3**
+![Image](images/3.png)
+![Image](images/4.png)
+	
+ - **Met an error that the user has not been granted the requested logon type**
+ 	Configure on win server to allow logon as a network service
+ ![Image](images/5.png)
+ ![Image](images/6.png)
+
+- **Run PSExec again:**
+ ![Image](images/7.png)
+
+- **Switch on win server 2022: analyze events **
+ ![Image](images/8.png)
+ ![Image](images/9.png)
+ ![Image](images/10.png)
+ ![Image](images/11.png)
 ### Detect PSExec by Finding changed service name
