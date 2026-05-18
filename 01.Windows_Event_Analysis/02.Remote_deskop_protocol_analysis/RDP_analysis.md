@@ -39,7 +39,6 @@ this ID is logged at the source machine.
 ![Image](images/4.png)
 ![Image](images/5.png)
 ![Image](images/6.png)
-![Image](images/7.png)
 - Switch on Attacker's machine, get EventID 4648
+![Image](images/7.png)
 ![Image](images/8.png)
-![Image](images/9.png)
