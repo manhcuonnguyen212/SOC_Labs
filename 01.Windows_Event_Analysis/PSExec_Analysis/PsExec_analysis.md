@@ -15,8 +15,8 @@ computer after execution.
 	Ssystem.evtx
 		7045: A service was installed in the system.
 ### Network diagram 
-![image]("D:\SOC_Labs\01.Windows_Event_Analysis\PSExec_Analysis\Screenshot 2026-05-18 204928.png"
+![image]("1.png"
 ### Detect PSExec by the default service name
 - Logon Win server 2022
-![image]("D:\SOC_Labs\01.Windows_Event_Analysis\PSExec_Analysis\Screenshot (285).png")
+![image]("2.png")
 ### Detect PSExec by Finding changed service name
