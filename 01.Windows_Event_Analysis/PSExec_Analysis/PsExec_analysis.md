@@ -41,8 +41,8 @@ computer after execution.
  ![Image](images/11.png)
 
 - **In conclusion:<br>**
-	- We found:<br>
-		- Event ID: 4624 with logon type 3 at 5/18/2026 8:29:25 PM. <br>
-		-Event ID: 7045 with service name PSEXEC.exe at 5/18/2026 8:28:17 PM. <br> 
-	- Therefore, We can consider that attacker was used PSExec to launch an attack on win server 2022. <br> 
+	- We found:
+		- Event ID: 4624 with logon type 3 at 5/18/2026 8:29:25 PM. 
+		- Event ID: 7045 with service name PSEXEC.exe at 5/18/2026 8:28:17 PM. 
+	- Therefore, We can consider that attacker was used PSExec to launch an attack on win server 2022.
 ### Detect PSExec by Finding changed service name
