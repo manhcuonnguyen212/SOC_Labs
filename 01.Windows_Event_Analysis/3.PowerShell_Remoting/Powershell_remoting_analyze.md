@@ -21,3 +21,24 @@
 	403 engine stopped
 	      ↓
 	4634 logoff
+### 5. Practice
+- Configure on client side:
+	Set-WSManQuickConfig
+	Enable-PSRemoting
+
+![Image](images/1.png)
+
+- Logon using Powershell remoting on attacker side:
+![Image](images/2.png)
+![Image](images/3.png)
+
+
+- Switch on client side and analyze related event logs:
+	**check EventID 4624**
+![Image](images/4.png)
+	**check EventID 4672 wheather admin privilege was asigned to the session**
+![Image](images/5.png)
+	**check EvenID 400: start a powershell session**
+![Image](images/6.png)
+
+
