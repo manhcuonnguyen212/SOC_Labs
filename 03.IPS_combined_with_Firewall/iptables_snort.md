@@ -19,15 +19,20 @@
 	- set static ip and default gateway
 ![Image](images/7.png)
 - **Configure on kali:**
-	- set static ip/routes
+	- set static ip/routes and ping test the connection
 ![Image](images/8.png)
-	- ping to test connection
 ![Image](images/9.png)
+![Image](images/14.png)
 - **Configure on Ubuntu serser 1:**
 	- set static ip/routes
 ![Image](images/10.png)
 ![Image](images/11.png)
-	- ping to test connection
+![Image](images/13.png)
 ![Image](images/12.png)
 - **Configure iptables to allow traffic from nework access to webserver on ubuntu server 0**
 	- **1. On kali**
+![Image](images/15.png)
+![Image](images/16.png)
+![Image](images/17.png)
+	- **2. On Ubuntu server 1: Test connection**
+![Image](images/18.png)
