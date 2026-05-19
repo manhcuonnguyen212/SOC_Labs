@@ -36,7 +36,7 @@
 
 ### 4. Filter contents 
 - **On rsyslog server: run 'sudo nano /etc/rsyslog.d/filter_logs.conf' -> write down the logs of Ubuntu_Server on a specific file**
-	**filter by $hostname**
+	- **filter by $hostname**
 ![Image](images/12.png)
 ![Image](images/13.png)
 ![Image](images/14.png)
@@ -44,8 +44,8 @@
 ### 5. Creating an encrypted connection to the log server 
 ![Image](images/30.png)
 - **- On client side: 
-		Install stunnel: sudo apt install stunnel  
-		Nano /etc/stunnel/stunnel.conf ***
+		- Install stunnel: sudo apt install stunnel  
+		- Nano /etc/stunnel/stunnel.conf **
 ![Image](images/15.png)
 ![Image](images/16.png)
 ![Image](images/17.png)
