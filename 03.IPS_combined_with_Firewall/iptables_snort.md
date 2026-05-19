@@ -32,5 +32,43 @@
 ![Image](images/15.png)
 ![Image](images/16.png)
 ![Image](images/17.png)
-	- **2. On Ubuntu server 1: Test connection**
+	- **2. On Ubuntu server 0: Test connection**
 ![Image](images/18.png)
+
+- **Configure NAT & port-fowarding on defaut gateway(Ubuntu server 1):**
+	- **NAT**
+![Image](images/19.png)
+![Image](images/20.png)
+
+	- **Port-forwarding**
+		- **Configure port-fowrading to SSH server: 10.0.100.10:22***
+![Image](images/21.png)
+![Image](images/22.png)
+![Image](images/23.png)
+![Image](images/24.png)
+		- **Configure port-fowrading to web server: 10.0.100.10:80***
+![Image](images/25.png)
+![Image](images/26.png)
+![Image](images/27.png)
+
+- **Configure Snort**
+	- **create rules**
+![Image](images/28.png)
+![Image](images/29.png)
+	- **delete FORWARD chains**
+![Image](images/30.png)
+	- create a queue to get packets from iptables
+![Image](images/32.png)
+![Image](images/31.png)
+![Image](images/35.png)
+
+	- run 
+![Image](images/33.png)
+![Image](images/34.png)
+
+	-**case study: ssh brute force**
+![Image](images/40.png)
+![Image](images/36.png)
+![Image](images/37.png)
+![Image](images/38.png)
+![Image](images/39.png)
