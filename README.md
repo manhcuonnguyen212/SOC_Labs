@@ -1,21 +1,21 @@
 # Security Operation Center Labs
 +---01.Windows_Event_Analysis
-¦   +---01.PSExec_Analysis
-¦   ¦   
-¦   +---02.Remote_deskop_protocol_analysis
-¦   ¦ 
-¦   +---03.PowerShell_Remoting
-¦   ¦  
-¦   +---04.Task_Scheduler
-¦   ¦  
-¦   +---5.File_Sharing_Related_Events
-¦   ¦   
-¦   +---6.Event_Log_Cleared_Events
-¦      
+Â¦   +---01.PSExec_Analysis
+Â¦   Â¦   
+Â¦   +---02.Remote_deskop_protocol_analysis
+Â¦   Â¦ 
+Â¦   +---03.PowerShell_Remoting
+Â¦   Â¦  git
+Â¦   +---04.Task_Scheduler
+Â¦   Â¦  
+Â¦   +---5.File_Sharing_Related_Events
+Â¦   Â¦   
+Â¦   +---6.Event_Log_Cleared_Events
+Â¦      
 +---02. Setup_Remote_SysLog_Server
-¦   
+Â¦   
 +---03.IPS_combined_with_Firewall
-¦  
+Â¦  
 +---04.Deploy_Splunk_Enterprise
     +---case_1
         
