@@ -8,6 +8,7 @@
 		-  4648: A logon was attempted using explicit credentials.
 		- 4778: A session was reconnected to a Window Station. (Not default)
 ### 2.How can detect this event?
+```text
 - Logon with RDP
 	• 4624 (Security.evtx)
 		• Description
@@ -27,6 +28,7 @@
 			• If a user inputs a credential clearly when the user logs on to remote machines with RDP, then 
 this ID is logged at the source machine.
 			• But when “Restricted Admin mode” is used, this ID is not logged for the admin accounts.
+```
 
 ### 3.Network diagram 
 ![Image](images/0.png)
