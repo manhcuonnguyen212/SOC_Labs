@@ -1,4 +1,4 @@
-### 1. iptables + snort
+### 1. Overview of iptables + snort
 ### 2. network diagram
 ![Image](images/0.png)
 ### 3. Setup

@@ -1,4 +1,4 @@
-### 1. Rsyslog & Syslog
+### 1. Overview of Rsyslog & Syslog
 ### 2. Network Diagram
 ![Image](images/0.png)
 
