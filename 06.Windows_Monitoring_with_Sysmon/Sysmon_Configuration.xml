@@ -1,0 +1,112 @@
+<Sysmon schemaversion="15.15"> 
+  <HashAlgorithms>SHA256</HashAlgorithms> 
+  
+  <EventFiltering>
+ <!--Event ID 1 Process created -->     
+     <ProcessCreate onmatch="exclude"> 
+    <!-- Program Files x86 --> 
+      <Image condition="image">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image> 
+      <Image condition="image">C:\Program Files (x86)\Google\Update\GoogleUpdate.exe</Image> 
+      <Image condition="contains">C:\Program Files (x86)\Google\Update</Image> 
+      <Image condition="image">C:\Program Files (x86)\Notepad++\notepad++.exe</Image> 
+      <Image condition="image">C:\Program Files (x86)\Common Files\Adobe\ARM\1.0\AdobeARM.exe</Image> 
+    <!-- Windows System32 --> 
+      <Image condition="image">C:\Windows\System32\SearchFilterHost.exe</Image> 
+      <Image condition="image">C:\Windows\System32\SearchProtocolHost.exe</Image> 
+      <Image condition="image">C:\Windows\System32\audiodg.exe</Image> 
+     </ProcessCreate>
+
+<!--Event ID 2 Process changed Created Time -->    
+ <FileCreateTime onmatch="exclude"> 
+  </FileCreateTime>
+
+  <!--Event ID 5 Process Terminated --> 
+ <ProcessTerminate onmatch="exclude"> 
+  <Image condition="image">C:\Windows\System32\backgroundTaskHost.exe</Image> 
+  <Image condition="image">C:\Windows\System32\taskhostw.exe</Image> 
+  <Image condition="image">C:\Windows\System32\Speech_OneCore\common\SpeechRuntime.exe</Image> 
+ </ProcessTerminate> 
+
+ <!--Event ID 6 Driver Load -->   
+ <DriverLoad onmatch="exclude"> 
+  </DriverLoad> 
+
+  <!--Event ID 7 ImageLoad -->    
+ <ImageLoad onmatch="exclude"> 
+ <!--Only collect False signed modules --> 
+  <Signed condition="image">true</Signed> 
+ <!--Program Files x86 --> 
+  <Image condition="image">C:\Program Files (x86)\WinMerge\ShellExtensionX64.dll</Image> 
+  <Image condition="image">C:\Program Files\7-Zip\7-zip.dll</Image> 
+  <Image condition="image">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image> 
+  <Image condition="contains">C:\Program Files (x86)\Google\Update</Image> 
+ <!--Windows System32 --> 
+  <Image condition="image">C:\Windows\System32\SearchFilterHost.exe</Image> 
+  <Image condition="image">C:\Windows\System32\SearchProtocolHost.exe</Image> 
+  <Image condition="image">C:\Windows\System32\audiodg.exe</Image> 
+ <!--Contains --> 
+<Image condition="contains">LOG-MD-Pro.exe</Image> 
+ </ImageLoad> 
+
+  <!--Event ID 8 CreateRemoteThread -->    
+ <CreateRemoteThread onmatch="exclude"> 
+      <SourceImage condition="is">C:\Windows\system32\svchost.exe</SourceImage>
+      <SourceImage condition="is">C:\Windows\system32\wininit.exe</SourceImage>
+      <SourceImage condition="is">C:\Windows\system32\csrss.exe</SourceImage>
+      <SourceImage condition="is">C:\Windows\system32\services.exe</SourceImage>
+      <SourceImage condition="is">C:\Windows\system32\winlogon.exe</SourceImage>
+      <SourceImage condition="is">C:\Windows\system32\audiodg.exe</SourceImage>
+      <StartModule condition="is">C:\Windows\system32\kernel32.dll</StartModule>
+  </CreateRemoteThread> 
+
+  <!--Event ID 9 RawAccessRead -->    
+ <RawAccessRead onmatch="exclude"> 
+  <Image condition="image">System</Image> 
+  <Image condition="contains">C:\Windows\SystemApps\Microsoft.Windows.Cortana</Image> 
+  <Image condition="image">C:\Windows\System32\svchost.exe</Image> 
+  <Image condition="image">C:\Windows\System32\CompatTelRunner.exe</Image> 
+  <Image condition="image">C:\Windows\System32\SearchIndexer.exe</Image> 
+ </RawAccessRead> 
+
+    <!--Event ID 10 ProcessAccess -->    
+   <ProcessAccess onmatch="include"> 
+     </ProcessAccess> 
+
+   <!--Event ID 11 FileCreate -->    
+ <FileCreate onmatch="exclude"> 
+  <Image condition="image">C:\Program Files (x86)\Notepad++\notepad++.exe</Image> 
+  <Image condition="image">C:\Program Files (x86)\Mozilla Firefox\firefox.exe</Image> 
+  <Image condition="image">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image> 
+  <Image condition="contains">C:\Users\BOB\AppData\Local\Microsoft\OneDrive</Image> 
+  <Image condition="contains">C:\WINDOWS\SystemApps\Microsoft.Windows.Cortana_</Image> 
+ <!--Target Filename --> 
+  <TargetFilename condition="image">C:\Program Files\WindowsApps\Microsoft.YourPhone</TargetFilename> 
+  <TargetFilename condition="image">C:\Program Files\WindowsApps\Microsoft.Microsoft3DViewer</TargetFilename> 
+  <TargetFilename condition="image">C:\ProgramData\Microsoft\Windows\AppRepository\Packages</TargetFilename> 
+ </FileCreate> 
+
+ <!--Event ID 12, 13, 14 Registry Events -->    
+ <RegistryEvent onmatch="exclude"> 
+  </RegistryEvent> 
+
+  <!--Event ID 15 File Create Stream and Hash -->   
+ <FileCreateStreamHash onmatch="exclude"> 
+  </FileCreateStreamHash> 
+
+  <!--Event ID 17 and 18 Pipe Event -->   
+ <PipeEvent onmatch="exclude"> 
+  <Image condition="image">C:\Program Files (x86)\Google\Chrome\Application\chrome.exe</Image> 
+ </PipeEvent> 
+
+  <!--Event ID 19,20,21 - WMI Events -->  
+ <WmiEvent onmatch="exclude"> 
+  </WmiEvent> 
+
+    <!--Event ID 22 - DNS Events -->  
+   <DnsQuery onmatch="exclude"> 
+    <QueryName condition="contains">microsoft.com</QueryName>
+    <QueryName condition="contains">google.com</QueryName> 
+    <QueryName condition="contains">facebook.com</QueryName>  
+   </DnsQuery> 
+  </EventFiltering>
+</Sysmon>
